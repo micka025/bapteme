@@ -115,6 +115,14 @@
             font-weight: bold;
         }
 
+        .header-overlay {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 30px 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
         @media (max-width: 768px) {
             .card-container {
                 flex-direction: column;
@@ -131,9 +139,11 @@
 <body>
 
 <header>
-    <h1>Emilia</h1>
-    <div class="subtitle">Une journée de lumière et de joie</div>
-    <p>Nous sommes heureux de vous inviter à célébrer son baptême</p>
+    <div class="header-overlay">
+        <h1>Emilia</h1>
+        <div class="subtitle">Une journée de lumière et de joie</div>
+        <p>Nous sommes heureux de vous inviter à célébrer son baptême</p>
+    </div>
 </header>
 
 <section>
