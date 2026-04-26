@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Baptême d'Emilia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose-pale: #fdf2f2;
+            --rose-accent: #e2b4b4;
+            --or-doux: #d4af37;
+            --texte: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--texte);
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--rose-pale);
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 2px solid var(--rose-accent);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--rose-accent);
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--or-doux);
+        }
+
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--rose-accent);
+            border-bottom: 1px solid var(--rose-pale);
+            padding-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: var(--rose-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d19a9a;
+        }
+
+        footer {
+            background-color: var(--rose-pale);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--or-doux);
+            margin: 20px auto;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Emilia</h1>
+        <div class="subtitle">Une journée de lumière et de joie</div>
+        <div class="divider"></div>
+        <p>Nous sommes heureux de vous inviter à célébrer son baptême</p>
+    </header>
+
+    <section>
+        <p>C'est avec une immense joie que nous vous convions à entourer notre petite Emilia pour cette étape importante de sa vie.</p>
+        
+        <div class="card-container">
+            <div class="card">
+                <h2>La Cérémonie</h2>
+                <p><strong>Lieu :</strong> Église de Broindon</p>
+                <p>2 bis Rue du Cerisier<br>21220 Broindon</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=2+bis+Rue+du+Cerisier+21220+Broindon" target="_blank" class="btn">Voir le plan</a>
+            </div>
+
+            <div class="card">
+                <h2>La Réception</h2>
+                <p><strong>Lieu :</strong> Castel de Très Girard</p>
+                <p>Après la cérémonie, nous nous retrouverons pour un moment de partage et de gourmandise au restaurant.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Castel+de+Tres+Girard+Morey-Saint-Denis" target="_blank" class="btn">S'y rendre</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Informations utiles</h2>
+        <p>Merci de nous confirmer votre présence avant le <strong>[Date de votre choix]</strong>.</p>
+        <p>Contact : [Votre numéro ou email]</p>
+    </section>
+
+    <footer>
+        <p>Hâte de partager ce moment avec vous !</p>
+        <p>♥</p>
+    </footer>
+
+</body>
+</html>
