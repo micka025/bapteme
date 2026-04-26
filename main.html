@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Baptême d'Emilia</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
@@ -21,29 +22,43 @@
             color: var(--texte);
         }
 
-        header {
-            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-                        url('https://i.postimg.cc/prqF0C5C/P1210550.jpg');
-            background-size: cover;
-            background-position: center;
+        /* ===== HERO IMAGE (FIX IPHONE) ===== */
+        .hero {
+            position: relative;
             height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%; /* ajuste si besoin */
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.8);
+            padding: 25px 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(6px);
             text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: var(--rose-accent);
             margin: 0;
         }
 
         .subtitle {
             font-style: italic;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--or-doux);
             margin-top: 10px;
         }
@@ -55,11 +70,13 @@
             text-align: center;
         }
 
+        /* ===== CARDS ===== */
         .card-container {
             display: flex;
             gap: 25px;
             justify-content: center;
             align-items: stretch;
+            flex-wrap: wrap;
         }
 
         .card {
@@ -115,33 +132,20 @@
             font-weight: bold;
         }
 
-        .header-overlay {
-            background: rgba(255, 255, 255, 0.75);
-            padding: 30px 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-
+        /* ===== MOBILE ===== */
         @media (max-width: 600px) {
-            header {
-                justify-content: flex-start;
-                padding-top: 60px;
+            h1 {
+                font-size: 2.3rem;
             }
-        
+
             .header-overlay {
-                margin-top: 20px;
+                top: 8%;
+                width: 85%;
+                padding: 20px;
+            }
+
+            .hero-img {
+                object-position: center 5%; /* remonte le visage sur iPhone */
             }
         }
     </style>
@@ -149,7 +153,10 @@
 
 <body>
 
-<header>
+<!-- HERO -->
+<header class="hero">
+    <img src="P1210550.jpeg" alt="Emilia" class="hero-img">
+
     <div class="header-overlay">
         <h1>Emilia</h1>
         <div class="subtitle">Une journée de lumière et de joie</div>
@@ -157,11 +164,16 @@
     </div>
 </header>
 
+<!-- INTRO -->
 <section>
-    <p>C'est avec une immense joie que nous vous convions à entourer notre petite Emilia pour cette belle étape de sa vie.</p>
+    <p>
+        C'est avec une immense joie que nous vous convions à entourer notre petite Emilia
+        pour cette belle étape de sa vie.
+    </p>
 
     <div class="card-container">
 
+        <!-- CEREMONIE -->
         <div class="card">
             <img src="https://echodescommunes.fr/formulaire/images/commune/112_Mairie-et-glise-de-Broindon.JPG" alt="Église">
             <div class="card-content">
@@ -176,10 +188,12 @@
                     </p>
                 </div>
 
-                <a href="https://www.google.com/maps/search/?api=1&query=2+bis+Rue+du+Cerisier+21220+Broindon" target="_blank" class="btn">Voir le plan</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=2+bis+Rue+du+Cerisier+21220+Broindon"
+                   target="_blank" class="btn">Voir le plan</a>
             </div>
         </div>
 
+        <!-- RECEPTION -->
         <div class="card">
             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/ab/4e/7b/vue-exterieure.jpg?w=900&h=500&s=1" alt="Réception">
             <div class="card-content">
@@ -194,13 +208,15 @@
                     </p>
                 </div>
 
-                <a href="https://www.google.com/maps/search/?api=1&query=Castel+de+Tres+Girard+Morey-Saint-Denis" target="_blank" class="btn">S'y rendre</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Castel+de+Tres+Girard+Morey-Saint-Denis"
+                   target="_blank" class="btn">S'y rendre</a>
             </div>
         </div>
 
     </div>
 </section>
 
+<!-- CONTACT -->
 <section>
     <h2>Contact</h2>
     <p class="contact">📞 06 72 09 61 05</p>
